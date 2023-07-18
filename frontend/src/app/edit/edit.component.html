@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-mod-6">
+            <div class="card" style="padding: 20px;">
+                <div class="text-center">
+                    <h6>Please add new todo list</h6>
+                </div>
+                <form #updateForm="ngForm" (ngSubmit)="update(updateForm)">
+                        <div class="mb-3">
+                          <label for="" class="form-label">Emp_id</label>
+                          <input type="text" name="emp_id" id="emp_id"  class="form-control" [(ngModel)]="todo.emp_id" readonly>
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Name</label>
+                          <input type="text" name="name" id="name"  class="form-control" [(ngModel)]="todo.name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Position</label>
+                            <input type="text" name="position" id="position"  class="form-control" [(ngModel)]="todo.position">
+                          </div>
+                          <div class="mb-3">
+                            <label for="" class="form-label">Date</label>
+                            <input type="text" name="date" id="date"  class="form-control" [(ngModel)]="todo.date">
+                          </div>
+                          <div class="mb-3">
+                            <label for="" class="form-label">Remarks</label>
+                            <input type="text" name="remarks" id="remarks"  class="form-control" [(ngModel)]="todo.remarks">
+                          </div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

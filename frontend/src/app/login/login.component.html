@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-mod-6">
+            <div class="card" style="padding: 20px;">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h6>Please enter your username & password</h6>
+                </div>
+                <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                        <div class="mb-3">
+                          <label for="" class="form-label">Username</label>
+                          <input type="text" ngModel name="username" id="username"  class="form-control">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Password</label>
+                          <input type="password" ngModel name="password" id="password"  class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    
+                </form>
+                <div class="text-center mt-3">
+                    <p>Not registered yet? <a href="/register">Register now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

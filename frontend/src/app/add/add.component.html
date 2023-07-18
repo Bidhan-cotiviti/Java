@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-mod-6">
+            <div class="card" style="padding: 20px;">
+                <div class="text-center">
+                    <h6>Please add new todo list</h6>
+                </div>
+                <form #addForm="ngForm" (ngSubmit)="add(addForm)">
+                        <div class="mb-3">
+                          <label for="" class="form-label">Emp_id</label>
+                          <input type="text" ngModel name="emp_id" id="emp_id"  class="form-control">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Name</label>
+                          <input type="text" ngModel name="name" id="name"  class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Position</label>
+                            <input type="text" ngModel name="position" id="position"  class="form-control">
+                          </div>
+                          <div class="mb-3">
+                            <label for="" class="form-label">Date</label>
+                            <input type="text" ngModel name="date" id="date"  class="form-control">
+                          </div>
+                          <div class="mb-3">
+                            <label for="" class="form-label">Remarks</label>
+                            <input type="text" ngModel name="remarks" id="remarks"  class="form-control">
+                          </div>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-mod-6">
+            <div class="card" style="padding: 20px;">
+                <div class="text-center">
+                    <h1>Register</h1>
+                    
+                </div>
+                <div [style.color]="messageColor" *ngIf="message">{{ message }}</div>
+                 
+                <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+                        <div class="mb-3">
+                          <label for="" class="form-label">Username</label>
+                          <input type="text" ngModel name="username" id="username"  class="form-control">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Password</label>
+                          <input type="password" ngModel name="password" id="password"  class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    
+                </form>
+                <div class="text-center mt-3">
+                <a href="/login">Go back to Login Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

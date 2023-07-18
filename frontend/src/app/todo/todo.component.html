@@ -1,0 +1,31 @@
+<button type="button" class="btn btn-primary float-end" (click)="add()">Add new</button>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Emp_ID</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Date</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos">
+        <td>{{ todo.emp_id }}</td>
+        <td>{{ todo.name }}</td>
+        <td>{{ todo.position }}</td>
+        <td>{{ todo.date | date }}</td>
+        <td>{{ todo.remarks }}</td>
+        <td>
+          <button class="btn btn-link" (click)="editTodo(todo)">
+            <i class="fas fa-edit"></i> Edit
+          </button>
+          <button class="btn btn-link" (click)="deleteTodo(todo)">
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
